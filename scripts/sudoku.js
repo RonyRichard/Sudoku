@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sudokuBoard = document.getElementById("sudokuBoard");
-    let grid = Array.from({length: 9}, () => Array(9).fill(0));
+    window.grid = Array.from({length: 9}, () => Array(9).fill(0)); // Make grid global
 
     for (let i = 0; i < 9; i++) {
         const row = sudokuBoard.insertRow();
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         clearBoard();
     });
 
-
     function generateRandom(grid) {
         clearBoard();
         for (let i = 0; i < 9; i++) {
@@ -63,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     function fillBoard(grid) {
         for (let i = 0; i < 9; i++) {
             for (let j = 0; j < 9; j++) {
@@ -71,11 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
-
-
-
-
-
 
     function solveSudoku(grid) {
         let empty = findEmptyLocation(grid);
@@ -126,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return true;
     }
-    
+
     function isInBox(grid, startRow, startCol, num) {
         let boxStartRow = startRow - startRow % 3;
         let boxStartCol = startCol - startCol % 3;
@@ -139,7 +132,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return true;
     }
-    
-}
-
-);
+});
