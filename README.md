@@ -1,6 +1,6 @@
 # Overview
 
-- [MiniDoku](https://ronyrichard.github.io/MiniDoku)
+[MiniDoku](https://ronyrichard.github.io/MiniDoku)
 
 This Project is a web-based Sudoku game. I wrote this because I wanted to deepen my understanding of Javascript. I also wanted to create a website so I could test out Github.pages 
 
